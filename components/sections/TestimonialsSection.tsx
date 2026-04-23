@@ -41,7 +41,7 @@ export function TestimonialsSection({}: TestimonialsSectionProps) {
   ];
 
   return (
-    <section className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
+    <section id="cases" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
       <motion.div {...subtleScroll} className="text-center max-w-3xl mx-auto mb-20">
         <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
           Depoimentos (Prova)

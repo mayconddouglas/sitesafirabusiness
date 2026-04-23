@@ -18,7 +18,7 @@ export interface PricingSectionProps {}
 
 export function PricingSection({}: PricingSectionProps) {
   return (
-    <section id="membership" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
+    <section id="planos" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
       <motion.div {...subtleScroll} className="text-center max-w-3xl mx-auto mb-24">
         <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
           Adesão (Ação)

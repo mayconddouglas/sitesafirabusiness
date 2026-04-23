@@ -45,7 +45,7 @@ export function HowItWorksSection({}: HowItWorksSectionProps) {
   ];
 
   return (
-    <section className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
+    <section id="como-funciona" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
       <motion.div {...subtleScroll} className="flex flex-col md:flex-row justify-between items-end mb-20 gap-12">
         <div>
           <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
