@@ -20,10 +20,10 @@ export function PricingSection({}: PricingSectionProps) {
   return (
     <section id="membership" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
       <motion.div {...subtleScroll} className="text-center max-w-3xl mx-auto mb-24">
-        <span className="block text-accent font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
+        <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
           Adesão (Ação)
         </span>
-        <h2 className="text-5xl md:text-6xl font-serif mb-8 text-text-primary">
+        <h2 className="text-5xl md:text-6xl font-display mb-8 text-text-primary">
           Membros <span className="italic text-text-secondary">Safira.</span>
         </h2>
         <p className="text-text-secondary text-base font-medium max-w-2xl mx-auto">
@@ -76,4 +76,3 @@ export function PricingSection({}: PricingSectionProps) {
     </section>
   );
 }
-

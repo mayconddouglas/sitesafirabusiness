@@ -25,10 +25,10 @@ export function FeaturesSection({}: FeaturesSectionProps) {
       <section id="experiencia" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
         <motion.div {...subtleScroll} className="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
           <div>
-            <span className="block text-accent font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
+            <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
               A Experiência (Interesse)
             </span>
-            <h2 className="text-5xl md:text-6xl font-serif text-text-primary leading-[1.1] max-w-2xl">
+            <h2 className="text-5xl md:text-6xl font-display text-text-primary leading-[1.1] max-w-2xl">
               Sofisticação digital, <br />
               <span className="italic text-text-secondary">feita sob medida.</span>
             </h2>
@@ -83,7 +83,7 @@ export function FeaturesSection({}: FeaturesSectionProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-auto">
             <div className="lg:col-span-5">
-              <h2 className="text-5xl md:text-6xl font-serif leading-tight mb-8">
+              <h2 className="text-5xl md:text-6xl font-display leading-tight mb-8">
                 O cérebro oculto
                 <br />
                 <span className="text-white/50 italic">por trás da sua grife.</span>
@@ -100,8 +100,8 @@ export function FeaturesSection({}: FeaturesSectionProps) {
 
             <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-12">
               <div className="border-t border-white/20 pt-8 transition-opacity duration-1000 hover:opacity-100 opacity-70">
-                <h4 className="text-2xl font-serif mb-4 flex items-center justify-between">
-                  Visão Semântica <span className="text-white/40 text-sm font-sans tracking-widest opacity-80">01</span>
+                <h4 className="text-2xl font-display mb-4 flex items-center justify-between">
+                  Visão Semântica <span className="text-white/40 text-sm font-body tracking-widest opacity-80">01</span>
                 </h4>
                 <p className="text-white/60 leading-relaxed font-medium">
                   A Safira identifica desejos subliminares. Se o cliente pede &quot;algo fresco para Mônaco&quot;, ela
@@ -110,8 +110,8 @@ export function FeaturesSection({}: FeaturesSectionProps) {
               </div>
 
               <div className="border-t border-white/20 pt-8 transition-opacity duration-1000 hover:opacity-100 opacity-70">
-                <h4 className="text-2xl font-serif mb-4 flex items-center justify-between">
-                  Fidelidade Absoluta <span className="text-white/40 text-sm font-sans tracking-widest opacity-80">02</span>
+                <h4 className="text-2xl font-display mb-4 flex items-center justify-between">
+                  Fidelidade Absoluta <span className="text-white/40 text-sm font-body tracking-widest opacity-80">02</span>
                 </h4>
                 <p className="text-white/60 leading-relaxed font-medium">
                   Delírio algorítmico não existe aqui. Ela jamais recomendará um produto de concorrentes ou fora do seu
@@ -120,8 +120,8 @@ export function FeaturesSection({}: FeaturesSectionProps) {
               </div>
 
               <div className="border-t border-white/20 pt-8 transition-opacity duration-1000 hover:opacity-100 opacity-70">
-                <h4 className="text-2xl font-serif mb-4 flex items-center justify-between">
-                  Implantação Fluida <span className="text-white/40 text-sm font-sans tracking-widest opacity-80">03</span>
+                <h4 className="text-2xl font-display mb-4 flex items-center justify-between">
+                  Implantação Fluida <span className="text-white/40 text-sm font-body tracking-widest opacity-80">03</span>
                 </h4>
                 <p className="text-white/60 leading-relaxed font-medium">
                   Nossa arquitetura foi desenhada para conectar com ERPs pesados. Tudo se sincroniza nos bastidores sem

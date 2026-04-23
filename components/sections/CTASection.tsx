@@ -21,7 +21,7 @@ export function CTASection({}: CTASectionProps) {
   return (
     <motion.section
       {...subtleScroll}
-      className="py-40 px-8 md:px-16 max-w-[1600px] mx-auto text-center border-t border-border-subtle"
+      className="py-40 px-8 md:px-16 max-w-[1600px] mx-auto text-center border-t border-border"
     >
       <div className="inline-flex items-center gap-3 mb-10">
         <motion.span
@@ -41,7 +41,7 @@ export function CTASection({}: CTASectionProps) {
         ></motion.span>
       </div>
 
-      <h2 className="text-6xl md:text-8xl font-serif tracking-tight mb-12 leading-[1.05]">
+      <h2 className="text-6xl md:text-8xl font-display tracking-tight mb-12 leading-[1.05]">
         Transcenda o <span className="italic text-text-secondary block mt-2">atendimento convencional.</span>
       </h2>
 
@@ -52,7 +52,7 @@ export function CTASection({}: CTASectionProps) {
           </button>
         </Magnetic>
         <Magnetic className="w-full sm:w-auto">
-          <button className="group w-full sm:w-auto bg-transparent border border-border-subtle text-text-primary px-12 py-5 rounded-full font-semibold text-[11px] tracking-widest uppercase hover:bg-border-subtle/30 transition-all duration-700 flex items-center justify-center gap-3 hover:-translate-y-1">
+          <button className="group w-full sm:w-auto bg-transparent border border-border text-text-primary px-12 py-5 rounded-full font-semibold text-[11px] tracking-widest uppercase hover:bg-border/30 transition-all duration-700 flex items-center justify-center gap-3 hover:-translate-y-1">
             Agendar Advisory Board{' '}
             <ArrowUpRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </button>
@@ -61,4 +61,3 @@ export function CTASection({}: CTASectionProps) {
     </motion.section>
   );
 }
-

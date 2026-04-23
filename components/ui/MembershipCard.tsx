@@ -29,8 +29,8 @@ export function MembershipCard({
       style={{ willChange: 'transform, opacity', transform: 'translateZ(0)' }}
       className={`p-10 md:p-14 border rounded-[2rem] flex flex-col relative transition-all duration-1000 ${
         isPremium
-          ? 'bg-accent text-white border-transparent shadow-[0_30px_80px_rgba(10,37,64,0.15)] hover:shadow-[0_40px_100px_rgba(10,37,64,0.25)] hover:-translate-y-1'
-          : 'bg-transparent border-border-subtle hover:border-text-primary/10 text-text-primary hover:bg-white/40'
+          ? 'bg-safira-deep text-white border-transparent shadow-[0_30px_80px_rgba(10,37,64,0.15)] hover:shadow-[0_40px_100px_rgba(10,37,64,0.25)] hover:-translate-y-1'
+          : 'bg-transparent border-border hover:border-text-primary/10 text-text-primary hover:bg-white/40'
       }`}
     >
       {isPremium && (
@@ -42,7 +42,7 @@ export function MembershipCard({
         </div>
       )}
 
-      <h3 className={`text-4xl font-serif mb-4 ${isPremium ? 'text-white' : 'text-text-primary'}`}>
+      <h3 className={`text-4xl font-display mb-4 ${isPremium ? 'text-white' : 'text-text-primary'}`}>
         {name}
       </h3>
       <p className={`text-[15px] mb-12 leading-relaxed font-medium ${isPremium ? 'text-white/70' : 'text-text-secondary'}`}>
@@ -82,8 +82,8 @@ export function MembershipCard({
       <button
         className={`w-full py-5 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-700 ${
           isPremium
-            ? 'bg-white text-accent mx-0 hover:bg-bg-primary hover:shadow-[0_10px_20px_rgba(255,255,255,0.1)]'
-            : 'bg-bg-secondary border border-border-subtle hover:bg-text-primary hover:text-white mx-0 shadow-sm hover:shadow-lg'
+            ? 'bg-white text-safira-deep mx-0 hover:bg-bg-primary hover:shadow-[0_10px_20px_rgba(255,255,255,0.1)]'
+            : 'bg-bg-secondary border border-border hover:bg-text-primary hover:text-white mx-0 shadow-sm hover:shadow-lg'
         }`}
       >
         {price === 'Fale Conosco' || price === 'Sob Consulta' ? 'Agendar Reunião VIP' : `Adquirir ${name}`}
@@ -91,4 +91,3 @@ export function MembershipCard({
     </motion.div>
   );
 }
-

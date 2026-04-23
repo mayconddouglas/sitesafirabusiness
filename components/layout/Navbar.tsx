@@ -14,7 +14,7 @@ export function Navbar({}: NavbarProps) {
   return (
     <header className="h-24 px-8 md:px-16 flex items-center justify-between bg-bg-primary/95 backdrop-blur-md sticky top-0 z-50">
       <div className="flex items-center gap-3">
-        <span className="font-serif italic font-medium text-2xl tracking-tight">Safira.</span>
+        <span className="font-display italic font-medium text-2xl tracking-tight">Safira.</span>
       </div>
 
       <nav className="hidden md:flex items-center gap-12">
@@ -52,7 +52,7 @@ export function Navbar({}: NavbarProps) {
       </div>
 
       <button
-        className="md:hidden text-text-primary hover:text-accent-hover transition-colors"
+        className="md:hidden text-text-primary hover:text-safira-mid transition-colors"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
         type="button"
@@ -69,16 +69,16 @@ export function Navbar({}: NavbarProps) {
             className="md:hidden bg-bg-secondary absolute top-full left-0 right-0 overflow-hidden z-50 shadow-2xl"
           >
             <div className="p-8 flex flex-col gap-6">
-              <a href="#experiencia" className="text-xl font-serif" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#experiencia" className="text-xl font-display" onClick={() => setMobileMenuOpen(false)}>
                 A Experiência
               </a>
-              <a href="#tecnologia" className="text-xl font-serif" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#tecnologia" className="text-xl font-display" onClick={() => setMobileMenuOpen(false)}>
                 Tecnologia
               </a>
-              <a href="#membership" className="text-xl font-serif" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#membership" className="text-xl font-display" onClick={() => setMobileMenuOpen(false)}>
                 Membership
               </a>
-              <div className="h-px bg-border-subtle my-4"></div>
+              <div className="h-px bg-border my-4"></div>
               <button className="bg-text-primary text-white px-6 py-4 rounded-full font-medium w-full text-xs uppercase tracking-widest" type="button">
                 Solicitar Convite
               </button>
@@ -89,4 +89,3 @@ export function Navbar({}: NavbarProps) {
     </header>
   );
 }
-

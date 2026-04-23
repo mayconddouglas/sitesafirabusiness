@@ -63,7 +63,7 @@ export function HeroSection({}: HeroSectionProps) {
 
             <motion.h1
               variants={subtleFade}
-              className="text-6xl md:text-[5.5rem] lg:text-[6.2rem] font-serif font-medium tracking-tight text-text-primary leading-[1.05] mb-8"
+              className="text-6xl md:text-[5.5rem] lg:text-[6.2rem] font-display font-medium tracking-tight text-text-primary leading-[1.05] mb-8"
             >
               A excelência do luxo. <br />
               <span className="italic text-text-secondary">Em escala cognitiva.</span>
@@ -88,7 +88,7 @@ export function HeroSection({}: HeroSectionProps) {
                 </button>
               </Magnetic>
               <Magnetic className="w-full sm:w-auto">
-                <button className="group relative w-full sm:w-auto flex items-center justify-center gap-4 text-[11px] tracking-widest uppercase font-semibold text-text-primary bg-transparent border border-border-subtle px-10 py-5 rounded-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:bg-white hover:border-black/10 will-change-transform overflow-hidden">
+                <button className="group relative w-full sm:w-auto flex items-center justify-center gap-4 text-[11px] tracking-widest uppercase font-semibold text-text-primary bg-transparent border border-border px-10 py-5 rounded-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:bg-white hover:border-black/10 will-change-transform overflow-hidden">
                   <span className="relative z-10 flex items-center justify-center gap-3">
                     O Universo Safira{' '}
                     <ArrowUpRight className="w-4 h-4 transition-transform duration-500 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 opacity-70 group-hover:opacity-100" />
@@ -183,22 +183,22 @@ export function HeroSection({}: HeroSectionProps) {
         </div>
       </section>
 
-      <motion.section {...subtleScroll} className="py-20 border-y border-border-subtle/40 bg-bg-secondary/20">
+      <motion.section {...subtleScroll} className="py-20 border-y border-border/40 bg-bg-secondary/20">
         <div className="max-w-[1600px] mx-auto px-8 md:px-16 flex flex-col items-center">
           <p className="text-[10px] font-semibold text-text-secondary uppercase tracking-[0.3em] mb-12 text-center">
             A Escolha Unânime das Mais Prestigiadas Maisons
           </p>
           <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-1000">
-            <span className="font-serif italic text-2xl md:text-3xl transition-transform duration-1000 hover:scale-105">
+            <span className="font-display italic text-2xl md:text-3xl transition-transform duration-1000 hover:scale-105">
               Amelie & Co.
             </span>
-            <span className="font-sans font-light tracking-[0.2em] text-lg md:text-xl uppercase transition-transform duration-1000 hover:scale-105">
+            <span className="font-body font-light tracking-[0.2em] text-lg md:text-xl uppercase transition-transform duration-1000 hover:scale-105">
               Maison Noir
             </span>
-            <span className="font-serif font-medium tracking-tight text-2xl md:text-3xl transition-transform duration-1000 hover:scale-105">
+            <span className="font-display font-medium tracking-tight text-2xl md:text-3xl transition-transform duration-1000 hover:scale-105">
               Atelier Ouro
             </span>
-            <span className="font-sans font-bold tracking-widest text-lg md:text-xl uppercase transition-transform duration-1000 hover:scale-105">
+            <span className="font-body font-bold tracking-widest text-lg md:text-xl uppercase transition-transform duration-1000 hover:scale-105">
               Vogue Minimal
             </span>
           </div>
@@ -207,4 +207,3 @@ export function HeroSection({}: HeroSectionProps) {
     </>
   );
 }
-

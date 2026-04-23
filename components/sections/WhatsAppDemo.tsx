@@ -49,10 +49,10 @@ export function WhatsAppDemo({}: WhatsAppDemoProps) {
     <section className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
       <motion.div {...subtleScroll} className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-5">
-          <span className="block text-accent font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
+          <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
             Demonstração (WhatsApp)
           </span>
-          <h2 className="text-5xl md:text-6xl font-serif text-text-primary leading-[1.1] mb-8">
+          <h2 className="text-5xl md:text-6xl font-display text-text-primary leading-[1.1] mb-8">
             Conversa real, <br />
             <span className="italic text-text-secondary">conversão invisível.</span>
           </h2>
@@ -63,7 +63,7 @@ export function WhatsAppDemo({}: WhatsAppDemoProps) {
         </div>
 
         <div className="lg:col-span-7">
-          <div className="rounded-[2.5rem] border border-border-subtle/60 bg-[#0A0A0C] p-[1px] shadow-[0_30px_80px_-25px_rgba(0,0,0,0.25)]">
+          <div className="rounded-[2.5rem] border border-border/60 bg-[#0A0A0C] p-[1px] shadow-[0_30px_80px_-25px_rgba(0,0,0,0.25)]">
             <div className="rounded-[2.5rem] bg-[#0A0A0C] overflow-hidden">
               <div className="px-8 py-6 border-b border-white/10 flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -124,4 +124,3 @@ export function WhatsAppDemo({}: WhatsAppDemoProps) {
     </section>
   );
 }
-

@@ -1,21 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-primary: #F8F9FA;
-  --color-bg-secondary: #FFFFFF;
-  --color-border-subtle: #E2E8F0;
-  --color-text-primary: #0B1120;
-  --color-text-secondary: #475569;
-  --color-text-light: #94A3B8;
-  
-  --color-accent: #0A2540;
-  --color-accent-hover: #123A60;
-  
-  --font-sans: var(--font-sans), sans-serif;
-  --font-serif: var(--font-serif), serif;
+  --color-safira-deep: #0F2A5C;
+  --color-safira-mid: #1A4B8C;
+  --color-safira-bright: #3B8BF5;
+  --color-safira-glow: #60A5FA;
+
+  --color-bg-primary: #FAFAFA;
+  --color-bg-dark: #080C14;
+  --color-bg-secondary: #F0F4FA;
+
+  --color-text-primary: #080C14;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6B7280;
+  --color-text-inverse: #F8FAFC;
+
+  --color-gold: #F0C040;
+  --color-gold-soft: #FDE68A;
+
+  --color-border: #D1DCF0;
+  --color-border-dark: rgba(59, 139, 245, 0.2);
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
+}
+
+.gradient-safira {
+  background: linear-gradient(135deg, #0F2A5C 0%, #1A4B8C 100%);
+}
+
+.glow-safira {
+  box-shadow: 0 0 40px var(--color-safira-bright);
+}
+
+@keyframes safira-pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(59, 139, 245, 0);
+  }
+  50% {
+    box-shadow: 0 0 42px rgba(59, 139, 245, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(59, 139, 245, 0);
+  }
 }

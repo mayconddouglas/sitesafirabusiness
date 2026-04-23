@@ -1,16 +1,17 @@
 import type {Metadata} from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-body',
   display: 'swap',
 });
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-serif',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-display',
   display: 'swap',
 });
 
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} font-sans bg-bg-primary text-text-primary antialiased selection:bg-accent/40`} suppressHydrationWarning>
+      <body className={`${dmSans.variable} ${cormorant.variable} font-body bg-bg-primary text-text-primary antialiased selection:bg-safira-bright/40`} suppressHydrationWarning>
         {children}
       </body>
     </html>
