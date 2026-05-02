@@ -91,15 +91,15 @@ function ChatBubble({ message, appearDelayMs, typeDelayMs }: ChatBubbleProps) {
       className={`flex ${isClient ? 'justify-end' : 'justify-start'}`}
     >
       <div
-        className={`max-w-[520px] rounded-2xl px-4 py-3 border shadow-sm ${
+        className={`max-w-[520px] rounded-2xl px-4 py-3 border ${
           isClient
-            ? 'bg-[#DCF8C6] border-[#BFE7A6] text-[#0B141A]'
-            : 'bg-white border-black/5 text-[#0B141A]'
+            ? 'bg-[#E8E3DB] border-white/10 text-[#0A0A0A]'
+            : 'bg-[#1C1C1C] border-white/10 text-[#F7F5F0]'
         }`}
       >
         <div className="flex items-start gap-2">
           {!isClient && message.showBotIcon && (
-            <span className="mt-0.5 w-6 h-6 rounded-full bg-[#0F2A5C] text-white flex items-center justify-center shrink-0">
+            <span className="mt-0.5 w-6 h-6 rounded-full bg-[#0D0D0D] text-[#F7F5F0] flex items-center justify-center shrink-0 border border-white/10">
               <Bot className="w-3.5 h-3.5" />
             </span>
           )}
@@ -109,7 +109,7 @@ function ChatBubble({ message, appearDelayMs, typeDelayMs }: ChatBubbleProps) {
           </div>
         </div>
 
-        <div className="mt-2 flex items-center justify-end gap-1.5 text-[10px] font-mono tracking-widest opacity-70">
+        <div className={`mt-2 flex items-center justify-end gap-1.5 text-[10px] font-mono tracking-widest ${isClient ? 'text-[#0A0A0A]/60' : 'text-[#F7F5F0]/55'}`}>
           <span>{message.time}</span>
           {message.showChecks && <CheckCheck className="w-3.5 h-3.5" />}
         </div>
@@ -142,26 +142,21 @@ function ChatMockup({}: ChatMockupProps) {
 
   return (
     <div className="relative w-full max-w-[780px] mx-auto">
-      <div className="absolute -inset-8 bg-[radial-gradient(ellipse_at_top,_rgba(59,139,245,0.22),_transparent_60%)] blur-2xl"></div>
-
-      <div className="relative rounded-[2rem] border border-white/10 bg-[#0B141A] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.6)] overflow-hidden">
-        <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#101B22]">
+      <div className="relative rounded-3xl border border-white/10 bg-[#111111] shadow-[0_50px_120px_-45px_rgba(0,0,0,0.85)] overflow-hidden">
+        <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#0D0D0D]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-white/80 font-display italic">
+            <div className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/85 font-display italic">
               S
             </div>
             <div className="leading-tight">
               <p className="text-sm text-white/90 font-medium tracking-wide">Safira Business</p>
-              <p className="text-[11px] text-emerald-300/70 tracking-widest uppercase">online</p>
+              <p className="text-[11px] text-white/50 tracking-widest uppercase">online</p>
             </div>
           </div>
           <div className="text-[10px] font-mono text-white/40 tracking-[0.2em] uppercase">WhatsApp</div>
         </div>
 
-        <div className="relative p-6 md:p-8 space-y-4 bg-[radial-gradient(ellipse_at_top,_rgba(34,197,94,0.14),_transparent_55%)]">
-          <div className="absolute inset-0 opacity-35 bg-[linear-gradient(135deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0)_36%,rgba(255,255,255,0.04)_100%)]"></div>
-          <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.08)_0%,transparent_45%),radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.06)_0%,transparent_42%)]"></div>
-
+        <div className="relative p-6 md:p-8 space-y-4 bg-[#111111]">
           <div className="relative space-y-4">
             {HERO_CHAT_MESSAGES.map((m, i) => (
               <ChatBubble key={i} message={m} appearDelayMs={timings[i]!.appear} typeDelayMs={timings[i]!.type} />
@@ -174,40 +169,17 @@ function ChatMockup({}: ChatMockupProps) {
 }
 
 export function HeroSection({}: HeroSectionProps) {
-  const particles = useMemo(() => {
-    const seed = 13;
-    const rand = (i: number) => {
-      const x = Math.sin(seed * 1000 + i * 97.13) * 10000;
-      return x - Math.floor(x);
-    };
-
-    return Array.from({ length: 18 }).map((_, i) => ({
-      id: i,
-      left: `${Math.floor(rand(i) * 100)}%`,
-      top: `${Math.floor(rand(i + 20) * 90)}%`,
-      size: 2 + Math.floor(rand(i + 40) * 3),
-      duration: 6 + rand(i + 60) * 10,
-      delay: rand(i + 80) * 3,
-      opacity: 0.18 + rand(i + 100) * 0.25,
-    }));
-  }, []);
-
   return (
-    <section className="relative overflow-hidden bg-obsidian">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(201,169,110,0.14)_0%,rgba(10,10,10,0.90)_52%,rgba(10,10,10,1)_72%)]"></div>
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.60)_0%,rgba(10,10,10,1)_72%)]"></div>
-
-      <div className="absolute inset-0 pointer-events-none">
-        {particles.map((p) => (
-          <motion.span
-            key={p.id}
-            className="absolute rounded-full bg-white"
-            style={{ left: p.left, top: p.top, width: p.size, height: p.size, opacity: p.opacity }}
-            animate={{ y: [0, -18, 0], opacity: [p.opacity, p.opacity * 1.35, p.opacity] }}
-            transition={{ duration: p.duration, repeat: Infinity, ease: 'easeInOut', delay: p.delay }}
-          />
-        ))}
-      </div>
+    <section className="relative overflow-hidden bg-[#0A0A0A]">
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none bg-repeat"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E\")",
+        }}
+      ></div>
+      <div className="absolute left-0 right-0 top-24 h-px bg-white/5"></div>
+      <div className="absolute left-0 right-0 top-36 h-px bg-white/5"></div>
 
       <div className="relative max-w-[1600px] mx-auto px-6 md:px-16 pt-16 md:pt-20 pb-10 md:pb-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
@@ -217,16 +189,15 @@ export function HeroSection({}: HeroSectionProps) {
             transition={{ duration: 0.9, ease: easeOut }}
             className="lg:col-span-5"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/80 font-body text-[12px] tracking-wide">
-              <span>🤖</span>
-              <span>Agente de IA para Moda • Disponível 24h</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.08] text-[#F7F5F0]/80 font-body text-[10px] tracking-[0.28em] uppercase">
+              IA · Atendimento · 24h
             </div>
 
-            <h1 className="mt-8 text-4xl md:text-5xl lg:text-[3.55rem] font-display leading-[1.05] tracking-tight text-gradient-luxury">
-              Sua loja atende, qualifica e vende no WhatsApp — sem você precisar estar online.
+            <h1 className="mt-10 font-display text-[#F7F5F0] leading-[1.05] tracking-tight text-[44px] md:text-[72px] font-normal">
+              Sua loja <span className="italic">atende sozinha</span>.
             </h1>
 
-            <p className="mt-6 text-[15px] md:text-lg text-white/65 leading-relaxed font-medium font-body max-w-xl">
+            <p className="mt-8 text-[16px] text-[#8A8A8A] leading-relaxed font-medium font-body max-w-[480px]">
               A Safira é uma IA treinada com o tom da sua marca. Ela responde clientes, recomenda produtos e fecha pedidos
               autonomamente. Enquanto você dorme.
             </p>
@@ -234,13 +205,13 @@ export function HeroSection({}: HeroSectionProps) {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a
                 href="#demo"
-                className="inline-flex items-center justify-center rounded-full px-7 py-4 font-body text-[13px] tracking-wide uppercase font-semibold text-text-inverse bg-gradient-to-r from-obsidian-soft to-obsidian hover:from-obsidian hover:to-obsidian-soft transition-all duration-500 shadow-[0_18px_40px_rgba(0,0,0,0.45)] border border-white/10"
+                className="inline-flex items-center justify-center rounded-sm px-7 py-4 font-body text-[13px] font-semibold text-[#0A0A0A] bg-[#F7F5F0] hover:bg-[#EDEAE3] transition-colors"
               >
-                Ver a Safira em Ação →
+                Ver em Ação →
               </a>
               <a
                 href="#planos"
-                className="inline-flex items-center justify-center rounded-full px-7 py-4 font-body text-[13px] tracking-wide uppercase font-semibold text-text-inverse/80 border border-white/15 bg-white/0 hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center px-2 py-4 font-body text-[13px] font-medium text-[#8A8A8A] underline decoration-white/20 underline-offset-4 hover:text-[#F7F5F0] hover:decoration-white/40 transition-colors"
               >
                 Começar Agora — R$ 297/mês
               </a>
@@ -265,20 +236,20 @@ export function HeroSection({}: HeroSectionProps) {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: easeOut }}
-          className="mt-14 md:mt-16 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md"
+          className="mt-14 md:mt-16 rounded-2xl border border-white/[0.08] bg-white/[0.04]"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/[0.08]">
             <div className="px-8 py-6 flex items-center justify-between">
-              <span className="text-white/70 font-body text-[12px] tracking-wide uppercase">3x mais vendas</span>
-              <span className="text-white font-display text-2xl">+3x</span>
+              <span className="text-[#8A8A8A] font-body text-[10px] tracking-[0.28em] uppercase">3x mais vendas</span>
+              <span className="text-[#F7F5F0] font-display text-[28px] font-normal">+3x</span>
             </div>
             <div className="px-8 py-6 flex items-center justify-between">
-              <span className="text-white/70 font-body text-[12px] tracking-wide uppercase">87% de satisfação</span>
-              <span className="text-white font-display text-2xl">87%</span>
+              <span className="text-[#8A8A8A] font-body text-[10px] tracking-[0.28em] uppercase">87% de satisfação</span>
+              <span className="text-[#F7F5F0] font-display text-[28px] font-normal">87%</span>
             </div>
             <div className="px-8 py-6 flex items-center justify-between">
-              <span className="text-white/70 font-body text-[12px] tracking-wide uppercase">24h de atendimento</span>
-              <span className="text-white font-display text-2xl">24h</span>
+              <span className="text-[#8A8A8A] font-body text-[10px] tracking-[0.28em] uppercase">24h de atendimento</span>
+              <span className="text-[#F7F5F0] font-display text-[28px] font-normal">24h</span>
             </div>
           </div>
         </motion.div>
