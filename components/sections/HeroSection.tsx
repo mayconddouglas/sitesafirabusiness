@@ -193,9 +193,9 @@ export function HeroSection({}: HeroSectionProps) {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#080C14]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(59,139,245,0.28)_0%,rgba(26,75,140,0.10)_28%,rgba(8,12,20,1)_68%)]"></div>
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,20,0.55)_0%,rgba(8,12,20,1)_70%)]"></div>
+    <section className="relative overflow-hidden bg-obsidian">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(201,169,110,0.14)_0%,rgba(10,10,10,0.90)_52%,rgba(10,10,10,1)_72%)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.60)_0%,rgba(10,10,10,1)_72%)]"></div>
 
       <div className="absolute inset-0 pointer-events-none">
         {particles.map((p) => (
@@ -222,7 +222,7 @@ export function HeroSection({}: HeroSectionProps) {
               <span>Agente de IA para Moda • Disponível 24h</span>
             </div>
 
-            <h1 className="mt-8 text-4xl md:text-5xl lg:text-[3.55rem] font-display text-white leading-[1.05] tracking-tight">
+            <h1 className="mt-8 text-4xl md:text-5xl lg:text-[3.55rem] font-display leading-[1.05] tracking-tight text-gradient-luxury">
               Sua loja atende, qualifica e vende no WhatsApp — sem você precisar estar online.
             </h1>
 
@@ -234,13 +234,13 @@ export function HeroSection({}: HeroSectionProps) {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a
                 href="#demo"
-                className="inline-flex items-center justify-center rounded-full px-7 py-4 font-body text-[13px] tracking-wide uppercase font-semibold text-white bg-gradient-to-r from-safira-deep to-safira-mid hover:from-safira-mid hover:to-safira-deep transition-all duration-500 shadow-[0_18px_40px_rgba(0,0,0,0.35)]"
+                className="inline-flex items-center justify-center rounded-full px-7 py-4 font-body text-[13px] tracking-wide uppercase font-semibold text-text-inverse bg-gradient-to-r from-obsidian-soft to-obsidian hover:from-obsidian hover:to-obsidian-soft transition-all duration-500 shadow-[0_18px_40px_rgba(0,0,0,0.45)] border border-white/10"
               >
                 Ver a Safira em Ação →
               </a>
               <a
                 href="#planos"
-                className="inline-flex items-center justify-center rounded-full px-7 py-4 font-body text-[13px] tracking-wide uppercase font-semibold text-white/85 border border-white/15 bg-white/5 hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center rounded-full px-7 py-4 font-body text-[13px] tracking-wide uppercase font-semibold text-text-inverse/80 border border-white/15 bg-white/0 hover:bg-white/10 transition-colors"
               >
                 Começar Agora — R$ 297/mês
               </a>

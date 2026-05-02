@@ -49,7 +49,7 @@ export function WhatsAppDemo({}: WhatsAppDemoProps) {
     <section id="demo" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
       <motion.div {...subtleScroll} className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-5">
-          <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
+          <span className="block text-gold font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
             Demonstração (WhatsApp)
           </span>
           <h2 className="text-5xl md:text-6xl font-display text-text-primary leading-[1.1] mb-8">

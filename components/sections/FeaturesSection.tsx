@@ -25,7 +25,7 @@ export function FeaturesSection({}: FeaturesSectionProps) {
       <section id="funcionalidades" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
         <motion.div {...subtleScroll} className="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
           <div>
-            <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
+            <span className="block text-gold font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
               A Experiência (Interesse)
             </span>
             <h2 className="text-5xl md:text-6xl font-display text-text-primary leading-[1.1] max-w-2xl">

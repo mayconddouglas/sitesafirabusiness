@@ -57,7 +57,7 @@ export function HowItWorksSection({}: HowItWorksSectionProps) {
         transition={{ duration: 0.9, ease: easeOut }}
         className="text-center max-w-4xl mx-auto"
       >
-        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-bg-secondary/70 text-safira-mid font-body text-[12px] tracking-wide uppercase font-semibold">
+        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-ivory-dark/70 text-text-secondary font-body text-[12px] tracking-wide uppercase font-semibold">
           <Brain className="w-4 h-4" />
           Implementação em 48h
         </span>
@@ -95,19 +95,19 @@ export function HowItWorksSection({}: HowItWorksSectionProps) {
                 }}
                 className="relative"
               >
-                <span className="hidden md:block absolute left-1/2 -translate-x-1/2 top-12 w-3.5 h-3.5 rounded-full gradient-safira border border-white shadow-[0_12px_22px_rgba(15,42,92,0.25)]"></span>
-                <span className="md:hidden absolute left-6 top-12 w-3.5 h-3.5 rounded-full gradient-safira border border-white shadow-[0_12px_22px_rgba(15,42,92,0.25)]"></span>
+                <span className="hidden md:block absolute left-1/2 -translate-x-1/2 top-12 w-3.5 h-3.5 rounded-full bg-gradient-to-r from-obsidian-soft to-obsidian border border-ivory shadow-[0_12px_22px_rgba(10,10,10,0.22)]"></span>
+                <span className="md:hidden absolute left-6 top-12 w-3.5 h-3.5 rounded-full bg-gradient-to-r from-obsidian-soft to-obsidian border border-ivory shadow-[0_12px_22px_rgba(10,10,10,0.22)]"></span>
                 <div className="relative rounded-[2rem] border border-border bg-white p-8 md:p-9 overflow-hidden shadow-[0_18px_40px_rgba(8,12,20,0.06)]">
-                  <div className="absolute -right-6 -top-8 text-[7.5rem] font-display tracking-tight text-safira-bright/10 select-none">
+                  <div className="absolute -right-6 -top-8 text-[7.5rem] font-display tracking-tight text-obsidian/5 select-none">
                     {step.index}
                   </div>
 
                   <div className="relative">
                     <div className="flex items-center justify-between gap-4">
-                      <div className="w-12 h-12 rounded-2xl gradient-safira flex items-center justify-center shadow-[0_18px_40px_rgba(15,42,92,0.25)]">
-                        <Icon className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-obsidian-soft to-obsidian flex items-center justify-center shadow-[0_18px_40px_rgba(10,10,10,0.22)]">
+                        <Icon className="w-6 h-6 text-ivory" />
                       </div>
-                      <span className="px-3 py-1 rounded-full text-[11px] tracking-wide uppercase font-semibold font-body bg-bg-secondary text-safira-mid border border-border">
+                      <span className="px-3 py-1 rounded-full text-[11px] tracking-wide uppercase font-semibold font-body bg-ivory-dark text-text-secondary border border-border">
                         {step.eta}
                       </span>
                     </div>
@@ -131,7 +131,7 @@ export function HowItWorksSection({}: HowItWorksSectionProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.9, ease: easeOut, delay: 0.1 }}
-        className="mt-14 md:mt-20 rounded-[2rem] border border-border bg-bg-secondary/50 px-8 py-8"
+        className="mt-14 md:mt-20 rounded-[2rem] border border-border bg-ivory-dark/50 px-8 py-8"
       >
         <p className="text-[11px] tracking-[0.35em] uppercase font-semibold text-text-muted text-center">
           Integrações compatíveis

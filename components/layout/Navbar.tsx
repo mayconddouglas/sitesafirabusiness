@@ -33,8 +33,8 @@ export function Navbar({}: NavbarProps) {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white/95 backdrop-blur-xl transition-all duration-500 ${
-        isScrolled ? 'border-b border-border shadow-[0_10px_30px_rgba(8,12,20,0.06)]' : ''
+      className={`sticky top-0 z-50 bg-ivory/95 backdrop-blur-xl transition-all duration-500 ${
+        isScrolled ? 'border-b border-border shadow-[0_10px_30px_rgba(10,10,10,0.08)]' : ''
       }`}
     >
       <div className="h-20 md:h-24 px-6 md:px-16 flex items-center justify-between">
@@ -45,13 +45,13 @@ export function Navbar({}: NavbarProps) {
                 d="M12 2.5 20 7.1v9.8L12 21.5 4 16.9V7.1L12 2.5Z"
                 stroke="currentColor"
                 strokeWidth="1.5"
-                className="text-safira-deep"
+                className="text-text-primary"
               />
               <path
                 d="M12 4.7 18.4 8.4v7.2L12 19.3 5.6 15.6V8.4L12 4.7Z"
                 stroke="currentColor"
                 strokeWidth="1"
-                className="text-safira-bright/70"
+                className="text-gold/70"
               />
             </svg>
 
@@ -86,7 +86,7 @@ export function Navbar({}: NavbarProps) {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#demo"
-            className="font-body text-[13px] tracking-wide uppercase font-semibold text-text-secondary hover:text-text-primary transition-colors px-5 py-3 rounded-full border border-border bg-white/60 hover:bg-bg-secondary"
+            className="font-body text-[13px] tracking-wide uppercase font-semibold text-text-secondary hover:text-text-primary transition-colors px-5 py-3 rounded-full border border-border bg-ivory/60 hover:bg-ivory-dark"
           >
             Acessar Demo
           </a>
@@ -94,14 +94,14 @@ export function Navbar({}: NavbarProps) {
             href="https://wa.me/5511999999999"
             target="_blank"
             rel="noreferrer"
-            className="font-body text-[13px] tracking-wide uppercase font-semibold text-white px-6 py-3 rounded-full bg-gradient-to-r from-safira-deep to-safira-mid hover:from-safira-mid hover:to-safira-deep transition-all duration-500 shadow-sm hover:shadow-md"
+            className="font-body text-[13px] tracking-wide uppercase font-semibold text-text-inverse px-6 py-3 rounded-full bg-gradient-to-r from-obsidian to-obsidian-soft hover:from-obsidian-soft hover:to-obsidian transition-all duration-500 shadow-sm hover:shadow-md"
           >
             Falar com Especialista
           </a>
         </div>
 
         <button
-          className="md:hidden text-text-primary hover:text-safira-mid transition-colors"
+          className="md:hidden text-text-primary hover:text-text-secondary transition-colors"
           onClick={() => setMobileMenuOpen(true)}
           aria-label="Abrir menu"
           type="button"
@@ -128,7 +128,7 @@ export function Navbar({}: NavbarProps) {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', stiffness: 260, damping: 28 }}
-              className="fixed top-0 right-0 z-50 h-dvh w-[88%] max-w-sm bg-white border-l border-border shadow-[0_30px_80px_rgba(8,12,20,0.18)]"
+              className="fixed top-0 right-0 z-50 h-dvh w-[88%] max-w-sm bg-ivory border-l border-border shadow-[0_30px_80px_rgba(10,10,10,0.22)]"
             >
               <div className="h-20 px-6 flex items-center justify-between border-b border-border">
                 <div className="flex items-center gap-3">
@@ -136,7 +136,7 @@ export function Navbar({}: NavbarProps) {
                   <span className="font-body text-[12px] tracking-widest uppercase text-text-secondary">Business</span>
                 </div>
                 <button
-                  className="text-text-primary hover:text-safira-mid transition-colors"
+                  className="text-text-primary hover:text-text-secondary transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                   aria-label="Fechar menu"
                   type="button"
@@ -163,7 +163,7 @@ export function Navbar({}: NavbarProps) {
                   <a
                     href="#demo"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="font-body text-[13px] tracking-wide uppercase font-semibold text-text-secondary hover:text-text-primary transition-colors px-5 py-4 rounded-full border border-border bg-white/60 hover:bg-bg-secondary text-center"
+                    className="font-body text-[13px] tracking-wide uppercase font-semibold text-text-secondary hover:text-text-primary transition-colors px-5 py-4 rounded-full border border-border bg-ivory/60 hover:bg-ivory-dark text-center"
                   >
                     Acessar Demo
                   </a>
@@ -171,7 +171,7 @@ export function Navbar({}: NavbarProps) {
                     href="https://wa.me/5511999999999"
                     target="_blank"
                     rel="noreferrer"
-                    className="font-body text-[13px] tracking-wide uppercase font-semibold text-white px-6 py-4 rounded-full bg-gradient-to-r from-safira-deep to-safira-mid hover:from-safira-mid hover:to-safira-deep transition-all duration-500 shadow-sm hover:shadow-md text-center"
+                    className="font-body text-[13px] tracking-wide uppercase font-semibold text-text-inverse px-6 py-4 rounded-full bg-gradient-to-r from-obsidian to-obsidian-soft hover:from-obsidian-soft hover:to-obsidian transition-all duration-500 shadow-sm hover:shadow-md text-center"
                   >
                     Falar com Especialista
                   </a>

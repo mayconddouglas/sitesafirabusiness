@@ -10,7 +10,7 @@ import { WhatsAppDemo } from '@/components/sections/WhatsAppDemo';
 
 export default function Page() {
   return (
-    <div className="min-h-screen text-text-primary selection:bg-safira-bright/40 bg-bg-primary overflow-x-hidden">
+    <div className="min-h-screen text-text-primary selection:bg-gold/25 bg-ivory overflow-x-hidden">
       <Navbar />
 
       <main>

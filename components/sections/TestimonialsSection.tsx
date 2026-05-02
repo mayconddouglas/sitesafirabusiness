@@ -43,7 +43,7 @@ export function TestimonialsSection({}: TestimonialsSectionProps) {
   return (
     <section id="cases" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
       <motion.div {...subtleScroll} className="text-center max-w-3xl mx-auto mb-20">
-        <span className="block text-safira-bright font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
+        <span className="block text-gold font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
           Depoimentos (Prova)
         </span>
         <h2 className="text-5xl md:text-6xl font-display mb-8 text-text-primary">
@@ -63,7 +63,7 @@ export function TestimonialsSection({}: TestimonialsSectionProps) {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 1.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] as any }}
-            className="p-10 md:p-12 rounded-[2rem] border border-border/60 bg-bg-secondary/30 hover:bg-white/60 transition-all duration-1000"
+            className="p-10 md:p-12 rounded-[2rem] border border-border/60 bg-ivory-dark/35 hover:bg-ivory transition-all duration-1000"
           >
             <div className="flex items-center gap-1 mb-6">
               {Array.from({ length: 5 }).map((_, idx) => (
