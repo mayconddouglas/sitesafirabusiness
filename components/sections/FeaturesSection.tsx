@@ -5,7 +5,6 @@ import { motion } from 'motion/react';
 
 import { BoutiqueCard } from '@/components/ui/BoutiqueCard';
 import { AIBrainVisual } from '@/components/ui/AIBrainVisual';
-import { Magnetic } from '@/components/ui/Magnetic';
 
 const subtleScroll = {
   initial: { opacity: 0.01, scale: 0.98 },
@@ -22,18 +21,20 @@ export interface FeaturesSectionProps {}
 export function FeaturesSection({}: FeaturesSectionProps) {
   return (
     <>
-      <section id="funcionalidades" className="py-32 px-8 md:px-16 max-w-[1600px] mx-auto">
+      <section id="funcionalidades" className="py-24 md:py-32 px-6 md:px-16 max-w-[1600px] mx-auto bg-ivory">
         <motion.div {...subtleScroll} className="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
           <div>
-            <span className="block text-gold font-bold text-sm tracking-[0.2em] uppercase mb-6 drop-shadow-sm">
-              A Experiência (Interesse)
+            <span className="block text-text-muted font-semibold text-[12px] tracking-[0.25em] uppercase mb-6">
+              — Funcionalidades
             </span>
-            <h2 className="text-5xl md:text-6xl font-display text-text-primary leading-[1.1] max-w-2xl">
+            <h2 className="text-[44px] md:text-[64px] font-display font-normal text-text-primary leading-[1.05] max-w-2xl">
               Sofisticação digital, <br />
-              <span className="italic text-text-secondary">feita sob medida.</span>
+              <span className="text-text-secondary">
+                <span className="italic">feita</span> sob medida.
+              </span>
             </h2>
           </div>
-          <p className="text-base text-text-secondary max-w-sm font-medium leading-relaxed">
+          <p className="text-[15px] text-text-secondary max-w-sm font-medium leading-relaxed font-body">
             Esqueça chatbots engessados e robotizados. A Safira oferece uma jornada de alta constura no atendimento, fluindo
             através dos caprichos dos clientes como um legítimo Personal Shopper.
           </p>
@@ -41,21 +42,21 @@ export function FeaturesSection({}: FeaturesSectionProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <BoutiqueCard
-            icon={<MessageCircle className="w-5 h-5" />}
+            icon={<MessageCircle className="w-5 h-5 text-text-primary" />}
             tag="curadoria"
             title="Discurso de Grife"
             desc="Treinada com o DNA único da sua marca. Comunica-se com os clientes exalando a mesma elegância e etiqueta de um vendedor sênior da sua loja física."
             delay={0}
           />
           <BoutiqueCard
-            icon={<ShoppingBag className="w-5 h-5" />}
+            icon={<ShoppingBag className="w-5 h-5 text-text-primary" />}
             tag="velocidade"
             title="Acesso Imediato ao Acervo"
             desc="Esqueça o 'vou verificar no estoque'. A Safira acessa as coleções e recomenda as peças desejadas no timing perfeito das emoções."
             delay={0.15}
           />
           <BoutiqueCard
-            icon={<Zap className="w-5 h-5" />}
+            icon={<Zap className="w-5 h-5 text-text-primary" />}
             tag="conversão"
             title="Vendas Sem Atrito"
             desc="Toda a negociação e finalização acontece no próprio WhatsApp. Um ecossistema de desejo que culmina em transações de alto ticket invisíveis à concorrência."
@@ -67,7 +68,7 @@ export function FeaturesSection({}: FeaturesSectionProps) {
       <motion.section
         {...subtleScroll}
         id="tecnologia"
-        className="py-32 bg-text-primary text-white mx-4 md:mx-8 rounded-[3rem] px-8 md:px-16"
+        className="py-24 md:py-32 bg-[#0A0A0A] text-[#F7F5F0] px-6 md:px-16"
       >
         <div className="max-w-[1400px] mx-auto min-h-[600px] flex flex-col justify-between">
           <div className="flex items-center gap-3 mb-16 lg:mb-0">
@@ -76,32 +77,33 @@ export function FeaturesSection({}: FeaturesSectionProps) {
               whileInView={{ width: '2rem' }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-              className="h-px bg-white/40 opacity-50"
+              className="h-px bg-white/20 opacity-50"
             ></motion.span>
-            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-white/70">Arquitetura Cognitiva</span>
+            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-white/60">Arquitetura Cognitiva</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-auto">
             <div className="lg:col-span-5">
-              <h2 className="text-5xl md:text-6xl font-display leading-tight mb-8">
+              <h2 className="text-[44px] md:text-[64px] font-display font-normal leading-[1.05] mb-10">
                 O cérebro oculto
                 <br />
-                <span className="text-white/50 italic">por trás da sua grife.</span>
+                <span className="text-white/55 italic">por trás da sua grife.</span>
               </h2>
-              <Magnetic>
-                <button className="group flex items-center gap-4 text-[11px] tracking-widest uppercase font-semibold bg-transparent border border-white/20 px-8 py-4 rounded-full hover:bg-white/15 transition-all duration-700 hover:-translate-y-1">
-                  A Inteligência Proprietária{' '}
-                  <ArrowUpRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                </button>
-              </Magnetic>
+              <a href="#demo" className="inline-flex items-center gap-4 text-[11px] tracking-[0.22em] uppercase font-semibold text-white/70 hover:text-white transition-colors">
+                <span className="h-px w-10 bg-white/20"></span>
+                A Inteligência Proprietária <ArrowUpRight className="w-4 h-4 opacity-70" />
+              </a>
 
               <AIBrainVisual />
             </div>
 
             <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-12">
-              <div className="border-t border-white/20 pt-8 transition-opacity duration-1000 hover:opacity-100 opacity-70">
-                <h4 className="text-2xl font-display mb-4 flex items-center justify-between">
-                  Visão Semântica <span className="text-white/40 text-sm font-body tracking-widest opacity-80">01</span>
+              <div className="border-t border-white/15 pt-10 relative transition-opacity duration-700 hover:opacity-100 opacity-80">
+                <div className="absolute -top-10 right-0 text-[80px] font-display opacity-[0.06] leading-none select-none">
+                  01
+                </div>
+                <h4 className="text-2xl font-display font-medium mb-4">
+                  Visão Semântica
                 </h4>
                 <p className="text-white/60 leading-relaxed font-medium">
                   A Safira identifica desejos subliminares. Se o cliente pede &quot;algo fresco para Mônaco&quot;, ela
@@ -109,9 +111,12 @@ export function FeaturesSection({}: FeaturesSectionProps) {
                 </p>
               </div>
 
-              <div className="border-t border-white/20 pt-8 transition-opacity duration-1000 hover:opacity-100 opacity-70">
-                <h4 className="text-2xl font-display mb-4 flex items-center justify-between">
-                  Fidelidade Absoluta <span className="text-white/40 text-sm font-body tracking-widest opacity-80">02</span>
+              <div className="border-t border-white/15 pt-10 relative transition-opacity duration-700 hover:opacity-100 opacity-80">
+                <div className="absolute -top-10 right-0 text-[80px] font-display opacity-[0.06] leading-none select-none">
+                  02
+                </div>
+                <h4 className="text-2xl font-display font-medium mb-4">
+                  Fidelidade Absoluta
                 </h4>
                 <p className="text-white/60 leading-relaxed font-medium">
                   Delírio algorítmico não existe aqui. Ela jamais recomendará um produto de concorrentes ou fora do seu
@@ -119,9 +124,12 @@ export function FeaturesSection({}: FeaturesSectionProps) {
                 </p>
               </div>
 
-              <div className="border-t border-white/20 pt-8 transition-opacity duration-1000 hover:opacity-100 opacity-70">
-                <h4 className="text-2xl font-display mb-4 flex items-center justify-between">
-                  Implantação Fluida <span className="text-white/40 text-sm font-body tracking-widest opacity-80">03</span>
+              <div className="border-t border-white/15 pt-10 relative transition-opacity duration-700 hover:opacity-100 opacity-80">
+                <div className="absolute -top-10 right-0 text-[80px] font-display opacity-[0.06] leading-none select-none">
+                  03
+                </div>
+                <h4 className="text-2xl font-display font-medium mb-4">
+                  Implantação Fluida
                 </h4>
                 <p className="text-white/60 leading-relaxed font-medium">
                   Nossa arquitetura foi desenhada para conectar com ERPs pesados. Tudo se sincroniza nos bastidores sem
